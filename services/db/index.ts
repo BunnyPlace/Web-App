@@ -1,11 +1,9 @@
 import { User } from "./user";
-import { Boost } from "./boost"
 import { Typesaurus, schema } from "typesaurus";
 import { Task } from "./task";
 
 export const db = schema($ => ({
       users: $.collection<User>(),
-      boost :$.collection<Boost>(),
       tasks :$.collection<Task>()
 }));
 
