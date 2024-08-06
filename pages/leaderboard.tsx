@@ -1,9 +1,9 @@
-import { useEffect } from "react";
-import { useRouter } from "next/router";
 import { useAppStore } from "@/services/store/store";
 import { redirectToScreenFromCode } from "@/utils/redirectToScreenFromCode";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 
-export default function Quests() {
+export default function Refs() {
   const router = useRouter();
   const setScreen = useAppStore(state => state.setScreen);
 
@@ -13,5 +13,5 @@ export default function Quests() {
     router.push("/");
   }, [router, setScreen, router.asPath, router.push]);
 
-  return null;
+  return null; 
 }
